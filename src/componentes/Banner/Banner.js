@@ -6,8 +6,8 @@ function Banner(){
     return(
         <header className="banner">
             <picture>
-                <source srcSet='./imagens/Banner-yourteam-football-mobile.png' media="(max-width: 768px)"></source>
-                <img src="./imagens/Banner-YourTeam-Football.png" alt="Banner principal da página"/>
+                <source srcSet='./imagens/football-banner-mobile.png' media="(max-width: 430px)"></source>
+                <img src="./imagens/banner_football-wide.png" alt="Banner principal da página"/>
             </picture>
         </header>
     )
