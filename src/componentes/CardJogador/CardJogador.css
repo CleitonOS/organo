@@ -10,6 +10,7 @@
 
 .jogador img{
     width: 90%;
+    height: 300px;
     border-radius: 10px;
     position: relative;
     bottom: 16px;
