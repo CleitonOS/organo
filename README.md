@@ -1,3 +1,6 @@
+
+![image](https://github.com/CleitonOS/organo/assets/107083529/962e1d38-c74a-4b81-af00-276de893f4d0)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
