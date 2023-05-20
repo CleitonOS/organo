@@ -8,6 +8,12 @@
 ![cardMeioCampo](https://github.com/CleitonOS/organo/assets/107083529/688887ee-2d9c-4679-9dc8-b0228933d14f)
 ![cardDefensor](https://github.com/CleitonOS/organo/assets/107083529/788441bf-c628-43ce-bb65-653909551fec)
 
+## A aplicação conta com algumas funcionalidades:
+- Criação de Cards dinamicamente
+- Criação de Posições específicas
+- Excluir Cards
+- Mudar Cor de cada seção de Posição/Jogador
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
