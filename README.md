@@ -1,4 +1,5 @@
-# Projeto desenvolvido com React, com objetivo de criar Cards de Jogadores de Futebol de forma dinâmica
+# Organo
+Projeto desenvolvido com React, com objetivo de criar Cards de Jogadores de Futebol de forma dinâmica
 
 ![image](https://github.com/CleitonOS/organo/assets/107083529/962e1d38-c74a-4b81-af00-276de893f4d0)
 ![aplicacao-organo](https://github.com/CleitonOS/organo/assets/107083529/229d4a9b-a868-4d5f-8415-4e612e86f9c1)
