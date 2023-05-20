@@ -15,8 +15,6 @@ Projeto desenvolvido com React, com objetivo de criar Cards de Jogadores de Fute
 - Excluir Cards
 - Mudar Cor de cada seção de Posição/Jogador
 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
