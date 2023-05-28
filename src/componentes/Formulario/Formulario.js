@@ -11,9 +11,12 @@ const Formulario = (props) => {
     const [imagem, setImagem] = useState('')    
     const [jogador, setJogador] = useState('')
 
+    const [ nomePosicao, setNomePosicao] = useState('')    
+    const [ corPosicao, setCorPosicao] = useState('')
+
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        props.aoColaboradorCadastrado({
+        props.aoCadastrar({
             nome,
             pontuacao,
             imagem,
@@ -58,6 +61,28 @@ const Formulario = (props) => {
                     aoAlterado={valor => setJogador(valor)}
                 />
                 <Botao>Criar Jogador</Botao>
+            </form>
+
+            <form onSubmit={(evento) => {
+                evento.preventDefault()
+                props.cadastrarNovaPosicao({ nome: nomePosicao, cor: corPosicao })
+            }}>
+                <h2>Preencha os dados para criar uma nova posição do Jogador</h2>
+                <CampoTexto 
+                    obrigatorio 
+                    label="Digite o nome da posição" 
+                    placeholder="Ex: Goleiro"
+                    valor={nomePosicao}
+                    aoAlterado={valor => setNomePosicao(valor)}
+                />
+                <CampoTexto 
+                    obrigatorio
+                    label="Digite a cor da posição" 
+                    placeholder="Ex: #FFFFFF (Branco)"
+                    valor={corPosicao}
+                    aoAlterado={valor => setCorPosicao(valor)}
+                />
+                <Botao>Criar Posição do Jogador</Botao>
             </form>
         </section>
     )

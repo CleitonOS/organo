@@ -1,5 +1,7 @@
 .formulario {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin: 80px 0;
 }
@@ -10,6 +12,10 @@
     border-radius: 20px;
     padding: 24px 64px;
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.08);
+}
+
+.formulario form:last-child{
+    margin-top: 3rem;
 }
 
 @media screen and (max-width: 430px){

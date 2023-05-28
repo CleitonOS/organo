@@ -1,33 +1,32 @@
 import Banner from './componentes/Banner/Banner.js';
 import Formulario from './componentes/Formulario/Formulario.js';
-import CampoTexto from './componentes/CampoTexto/CampoTexto.js';
 import Jogadores from './componentes/Jogadores/Jogadores.js';
 import { useState } from 'react';
-import CardJogador from './componentes/CardJogador/CardJogador.js';
+import { v4 as uuidv4 } from 'uuid';
 
 //Componente React
 function App() {
 
   // lista
-  const jogadores = [
+  const [jogadores, setJogadores] = useState ([
     {
+      id: uuidv4(),
       nome:'Defensor',
-      corPrimaria:'#57c278',
-      corSecundaria:'#02EAA0',
+      cor:'#02EAA0',
     },
   
     {
+      id: uuidv4(),
       nome:'Meio-campista',
-      corPrimaria:'#82CFFA',
-      corSecundaria:'#0294FF',
+      cor:'#0294FF',
     },
 
     {
+      id: uuidv4(),
       nome:'Atacante',
-      corPrimaria:'#cc0052',
-      corSecundaria:'#FD1A5A',
+      cor:'#FD1A5A',
     }
-  ]
+  ])
 
   const [colaboradores, setColaboradores] = useState([])
 
@@ -35,21 +34,47 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
+  // -------FUNÇÃO DELETAR CARD-------
+  function deletarCard(nome) {
+    setColaboradores(colaboradores.filter(jogador => jogador.nome !== nome));
+  }
+
+  // -------FUNÇÃO DE MUDAR COR-------
+  function mudaCorDoJogador(cor, nome){
+    setJogadores(jogadores.map(jogador => {
+      if(jogador.nome === nome){
+        jogador.cor = cor;
+      }
+      return jogador;
+    }))
+  }
+
+  function cadastrarNovaPosicao (novaPosicao) {
+    setJogadores([...jogadores, { ...novaPosicao, id: uuidv4() } ])
+  }
+
+  
   return (
     <div className="App">
       <Banner />
-      <Formulario jogadores={jogadores.map(jogador => jogador.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      <Formulario 
+        cadastrarNovaPosicao={cadastrarNovaPosicao}
+        jogadores={jogadores.map(jogador => jogador.nome)} 
+        aoCadastrar={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+      />
       
       {jogadores.map(infoJogador => <Jogadores
+        mudarCor={mudaCorDoJogador}
         key={infoJogador.nome} 
         nome={infoJogador.nome} 
-        corPrimaria={infoJogador.corPrimaria} 
-        corSecundaria={infoJogador.corSecundaria} 
+        cor={infoJogador.cor} 
         jogadores={colaboradores.filter(colaborador => colaborador.jogador === infoJogador.nome)}
-        />)}
+        aoDeletar={deletarCard}
+      />)}
     </div>
   );
 }
+
 
 // Lógica do filter, tenho uma Array (colaboradores), através do filter determinamos uma condição
 // para cada jogador/colaborador, fazemos uma comparação do jogador/tipo de jogador com as InfoJogador.nome
