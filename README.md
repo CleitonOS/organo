@@ -1,3 +1,20 @@
+# Organo
+Projeto desenvolvido com React, com objetivo de criar Cards de Jogadores de Futebol de forma dinâmica
+
+![image](https://github.com/CleitonOS/organo/assets/107083529/962e1d38-c74a-4b81-af00-276de893f4d0)
+![aplicacao-organo](https://github.com/CleitonOS/organo/assets/107083529/229d4a9b-a868-4d5f-8415-4e612e86f9c1)
+
+## Alguns exemplos de Cards abaixo:
+![cardAtacante](https://github.com/CleitonOS/organo/assets/107083529/f759e02e-2798-4a70-a35c-a3028553bcde)
+![cardMeioCampo](https://github.com/CleitonOS/organo/assets/107083529/688887ee-2d9c-4679-9dc8-b0228933d14f)
+![cardDefensor](https://github.com/CleitonOS/organo/assets/107083529/788441bf-c628-43ce-bb65-653909551fec)
+
+## A aplicação conta com algumas funcionalidades:
+- Criação de Cards dinamicamente
+- Criação de Posições específicas
+- Excluir Cards
+- Mudar Cor de cada seção de Posição/Jogador
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
